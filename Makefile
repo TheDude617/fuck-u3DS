@@ -31,6 +31,10 @@ include $(DEVKITARM)/3ds_rules
 #     - icon.png
 #     - <libctru folder>/default_icon.png
 #---------------------------------------------------------------------------------
+APP_TITLE	:=	Fuck-u3ds
+APP_DESCRIPTION	:=	A homebrew app that insults you
+APP_AUTHOR	:=	TheOneandonlyDude
+ICON		:=	fu.png
 TARGET		:=	$(notdir $(CURDIR))
 BUILD		:=	build
 SOURCES		:=	source
@@ -38,8 +42,6 @@ DATA		:=	data
 INCLUDES	:=	include
 GRAPHICS	:=	gfx
 GFXBUILD	:=	$(BUILD)
-NO_SMDH		:=	anything
-APP_TITLE	:=	Fuck-U3DS
 #ROMFS		:=	romfs
 #GFXBUILD	:=	$(ROMFS)/gfx
 

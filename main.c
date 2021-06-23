@@ -9,9 +9,11 @@
 int main(int argc, char **argv)
 {
 	gfxInitDefault();
+		PrintConsole topScreen, bottomScreen;
 
 	//Initialize console on top screen. Using NULL as the second argument tells the console library to use the internal console structure as current one
-	consoleInit(GFX_TOP, NULL);
+	consoleInit(GFX_TOP, &topScreen);
+	consoleInit(GFX_BOTTOM, &bottomScreen);
 
 	//Move the cursor to row 15 and column 19 and then prints "Hello World!"
 	//To move the cursor you have to print "\x1b[r;cH", where r and c are respectively
@@ -19,9 +21,13 @@ int main(int argc, char **argv)
 	//The top screen has 30 rows and 50 columns
 	//The bottom screen has 30 rows and 40 columns
 	
-	printf("\x1b[30;16HPress A to say Fuck you, Press B to say Bitch, Press Y to say Shut up, Press X to Clear the Screen, Press Start to exit.");
-
+	
 	// Main loop
+	consoleSelect(&bottomScreen);
+	
+	printf("\x1b[1;16HPress A to say Fuck you, Press B to say Bitch, Press Y to say Shut up, Press X to Clear the Screen, Press Start to exit.");
+	
+	consoleSelect(&topScreen);
 	while (aptMainLoop())
 	{
 		//Scan all the inputs. This should be done once for each frame
@@ -30,7 +36,8 @@ int main(int argc, char **argv)
 		//hidKeysDown returns information about which buttons have been just pressed (and they weren't in the previous frame)
 		u32 kDown = hidKeysDown();
 		
-		if (kDown & KEY_A) printf("\x1b[16;20HFuckYou");
+		
+		if (kDown & KEY_A) printf("\x1b[16;20HFuck You");
 		
 		// Flush and swap framebuffers
 		gfxFlushBuffers();
@@ -39,7 +46,7 @@ int main(int argc, char **argv)
 		//Wait for VBlank
 		gspWaitForVBlank();
 
-		if (kDown & KEY_B) printf("\x1b[16;20HBitch");
+		if (kDown & KEY_B) printf("\x1b[16;20HBitch   ");
 
 		// Flush and swap framebuffers
 		gfxFlushBuffers();
@@ -48,7 +55,7 @@ int main(int argc, char **argv)
 		//Wait for VBlank
 		gspWaitForVBlank();
 		
-		if (kDown & KEY_Y) printf("\x1b[16;20HShutUp");
+		if (kDown & KEY_Y) printf("\x1b[16;20HShut Up ");
 		
 		// Flush and swap framebuffers
 		gfxFlushBuffers();
@@ -57,7 +64,7 @@ int main(int argc, char **argv)
 		//Wait for VBlank
 		gspWaitForVBlank();
 		
-		if (kDown & KEY_X) printf("\x1b");
+		if (kDown & KEY_X) consoleClear(        );
 		
 		// Flush and swap framebuffers
 		gfxFlushBuffers();
@@ -75,8 +82,9 @@ int main(int argc, char **argv)
 		//Wait for VBlank
 		gspWaitForVBlank();
 		
+		
 	}
-
+	
 	gfxExit();
 	return 0;
 }
