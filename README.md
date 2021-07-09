@@ -4,7 +4,6 @@ The original fuck-u (not by me) https://github.com/lolicop123/fuck-u <br />
 Thank you https://github.com/GlaZedBelmont for helping me inprove my code, the dev chat on NH for helping make all of this, the creators of the 3ds Examples for providing test examples. <br />
 Suggest Words with Issues <br />
 Stuff Coming Soon <br />
--anti aging cream <br />
--banner <br />
+-banner (most likely wont happen because cxitool is stupid) <br />
 -more words <br />
 -Instruction Text on the left
