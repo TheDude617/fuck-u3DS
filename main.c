@@ -33,7 +33,7 @@ int main(int argc, char **argv)
 		if (kDown & KEY_X) consoleClear(                            );
 		
 		
-		if (kDown & KEY_SELECT) printf("\x1b[16;20HGlazy's Anti Aging Cream ");
+		if (kDown & KEY_SELECT) printf("\x1b[16;20HDEAD_NEME_THAT_I_LEGIT_AM_TIRED_OF");
 		
 		
 		if (kDown & KEY_START) break;
