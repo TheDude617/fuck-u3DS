@@ -7,3 +7,4 @@ Stuff Coming Soon <br />
 -banner (most likely wont happen because cxitool is stupid) <br />
 -more words <br />
 -Instruction Text on the left
+This wont be getting updates anymore, its over!
