@@ -8,3 +8,4 @@ Stuff Coming Soon <br />
 -more words <br />
 -Instruction Text on the left <br />
 This wont be getting updates anymore, its over!
+If you want to fork or rerelease this, feel free to do it.
