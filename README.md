@@ -7,5 +7,3 @@ Stuff Coming Soon <br />
 -banner (most likely wont happen because cxitool is stupid) <br />
 -more words <br />
 -Instruction Text on the left <br />
-This wont be getting updates anymore, its over!
-If you want to fork or rerelease this, feel free to do it.
